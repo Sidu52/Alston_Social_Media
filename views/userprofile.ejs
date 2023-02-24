@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="/css/userprofile.css">
+
+
+<div class="profile">
+	<div class="profile_container">
+		<div class="profile-image">
+			<img src="<%= profile_user.avatar%>" alt="Profilei">
+		</div>
+		<% if(user.id==profile_user.id){%>
+			<div id="profilechange">
+				<div class="box">
+					<form action='/update/update/<%= profile_user.id %>' method="POST" enctype="multipart/form-data">
+						<label for="">
+							<input type="file" name="avatar">
+							<button type="submit" value="Update" class="btn">Submit</button>
+						</label>
+					</form>
+				</div>
+			</div>
+		<%}%>
+		
+	</div>
+	<div class="profile-info">
+		<h1><%= profile_user.username %></h1>
+		<p>Bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed est nec est faucibus tempus.</p>
+		<i class="uil uil-pen"></i>
+		
+	</div>
+</div>
+
+<div class="section">
+	<div>
+		<p><b>Post</b></p>
+	</div>
+	<section class="post">
+		<% for(posts of post){ %>
+			<% if(profile_user.id == posts.user){%>
+		    <div class="firstpost"><img src="<%= posts.postimg %>" alt="user_post"></div>
+			<% } %>
+		<% } %>
+	</section>
+</div>
+
+<script src="/js/script.js"></script>

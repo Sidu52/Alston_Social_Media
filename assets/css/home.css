@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    border:none;
+    font-family: "Poppins", sans-serif;
+}
+/* <<<<<<<<<<<<<<<<<<<MAIN>>>>>>>>>>>>>>>>>> */
+main{
+    padding-bottom: 132px;
+    padding-top: 92px;
+    background: rgb(246, 244, 244);
+}
+main .container,main .container .accounts{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+main .container{
+    margin: 0 8vw;
+}
+.logo-color{
+    color:#ea0673;
+}
+.heading img{
+    width: 4rem;
+    height: 3rem;
+    position: relative;
+    bottom: -10px;
+}
+.heading .heading-text,main .container text{
+    font-size: 2vw;
+    
+}
+main .account h5{
+    font-size: 2rem;
+}
+.accounts .account:hover{
+    box-shadow: 0 0 10px 1px rgba(119, 118, 118, 0.313);
+    transition: box-shadow 0.5s ease-in-out;
+}
+main .container .accounts img{
+    width: 15vw;
+    height: 15rem;
+}
+main .container .profile-text{
+    text-align: center;
+    padding: 1vw;
+    color: black;
+}
+.account a,h3{
+    background: white;
+}
+.accounts h3{
+    font-size: 1.3vw;
+}
+main .account{
+    padding: 0.5rem;
+}
+/* <<<<<<<<<<<<<<<<<<<<<<END>>>>>>>>>>>>>>>> */
+.right{
+    background: white;
+    padding: 1vw 1vw;
+    position: relative;
+    top: 3rem;
+    border-radius: 4%;
+}
+.right .email input{
+    font-size: 1rem;
+    padding: 14px 16px;
+    width: 30vw;
+    vertical-align: middle;
+    border: 1px solid #ea0673;
+    border-radius: 15px;
+    margin: 10px;
+    height: 22px;
+}
+.log-button {
+    font-size: 2vw;
+    background: #fe037d;
+    line-height: 48px;
+    padding: 0 16px;
+    width: 34vw;
+    border-radius: 7px;
+    margin: 24px 0;
+}
+.right-text{
+    text-align: center;
+    color:#ea0673;
+}
+.right-text hr{
+    height: 1px;
+    margin: 1vw;
+    background-color: gray;
+}
+.right .right-text .btn-1,.right .right-text .btn-2{
+    font-size: 1.5vw;
+    background: rgb(14, 237, 29);
+    line-height: 48px;
+    padding: 0 16px;
+    width: 20vw;
+    border-radius: 7px;
+}
+.right .right-text .btn-2{
+    display: none;
+}
+.log-button:hover,.right .right-text button:hover{
+    opacity: 0.8;
+}
+/* <<<<<<<<<<<<<<<<<<<<<<END>>>>>>>>>>>>>>>> */
+
+.extra-text{
+    text-align: right;
+    margin-left: 74vw;
+    position: relative;
+    font-size: 1vw;
+    top: 2rem;
+    right: 10rem;
+}
+/* <<<<<<<<<<<<<<MEDIA QURIES-1>>>>>>>>>>>>>>>>>> */
+@media screen and (max-width: 864px) {
+    .footer-container hr{
+        width: 55vw;
+    }
+    main .container .accounts img {
+        width: 17vw;
+        height: 9rem;
+    }
+    .right{
+        height: 20rem;
+    }
+    .right .right-text button{
+        display: none;
+    }
+    .right .right-text .btn-2{
+        display: block;
+        margin-left: 8vw;
+    }
+    .extra-text {
+    top: 4rem;
+    right: 8rem;
+}
+}
+@media screen and (max-width: 400px) {
+    main .container{
+        display: block;
+    }
+    main .container .accounts  {
+        justify-content: center;
+    }
+    main .container .accounts img {
+        width: 38vw;
+        height: 10rem;
+    }
+    .right .email input {
+        width: 67vw;
+    }
+    .log-button,.right .right-text .btn-2 {
+        position: relative;
+        left: 65px;
+    }
+    
+    .extra-text {
+        text-align: center;
+        margin-left: 49vw;
+        position: relative;
+        font-size: 3vw;
+        top: 4rem;
+        right: 6.5rem;
+    }
+}
+.Like-button{
+    color: black;
+}
