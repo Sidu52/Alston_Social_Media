@@ -2,13 +2,15 @@
 <div class="container">
     <div class="form-container">
       <h1>Sign Up</h1>
-      <form action="/user/createuser" method="POST">
-        <input type="text" name="username" placeholder="Username"  />
-        <input type="email" name="email" placeholder="Email"  />
-        <input type="password" name="password" placeholder="Password"  />
-        <input type="password" name="Conformpassword" placeholder="ReEnter-Password"  />
+      <!-- <form action="/user/createuser" method="POST"> -->
+      <form action="/emailverification" method="POST">
+        <input type="text" name="username" placeholder="Username"  required/>
+        <input type="email" name="email" placeholder="Email"  required/> 
+        <input type="password" name="password" placeholder="Password"  required/>
+        <input type="password" name="Conformpassword" placeholder="ReEnter-Password"  required/>
         <button>Sign Up</button>
       </form>
+      <p><a href="/user/auth/google"><i class="uil uil-google"></i></a></p>
     </div>
   </div>
   

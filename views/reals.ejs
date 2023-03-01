@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="/css/reals.css">
+
+<div class="video-slider">
+    <div class="video-slider-container">
+        <div class="video-slider-track">
+            <% for(posts of post) { %>
+                <% if (posts.fileformat==='.mp4' || posts.fileformat==='.avi' || posts.fileformat==='.mov' ||
+                    posts.fileformat==='.wmv' ) { %>
+                    <div class="video-slide">
+                        <video src="<%= posts.postimg %>" controls loop></video>
+                        <div class="controller">
+                            <i class="uil uil-heart-alt"></i>
+                            <i class="uil uil-comment"></i>
+                            <i class="uil uil-share"></i>
+                        </div>
+                        <div class="heading">
+                            <div class="userprofile">
+                                <img src="<%= posts.user.avatar%>" alt="profile">
+                                <span><h3>
+                                    <%= posts.user.name %>
+                                </h3></span>
+                                
+                            </div>
+                            <div class="userbio">
+                                <p>
+                                    <%= posts.content %>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                <% } %>
+            <% } %>
+        </div>
+
+    </div>
+
+    <div class="video-slider-controls">
+        <button class="video-slider-prev"><i class="uil uil-angle-double-up"></i></button>
+        <button class="video-slider-next"><i class="uil uil-angle-double-down"></i></button>
+    </div>
+
+</div>
+<a class="backbutton" href="/user/alstonpage">
+    <button><i class="uil uil-backward"></i></button>
+</a>
+<script src="/js/reals.js"></script>

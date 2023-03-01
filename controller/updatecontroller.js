@@ -4,6 +4,7 @@ const Comment= require('../models/comments');
 const fs = require('fs');
 const path = require('path');
 const POST_PATH =('/uploads/users/posts');
+const VIDEO_PATH=('/uploads/users/posts/video');
 
 module.exports.update = async function (req, res) {
     if (req.user.id == req.params.id) {
@@ -33,10 +34,14 @@ module.exports.update = async function (req, res) {
 }
 
 module.exports.createpost = async (req, res) => {
+    const extension = path.extname(req.file.originalname).toLowerCase();
+    //     console.log(extension)
+    // console.log(req.user.id,+"=="+ req.params.id)
     if (req.user.id == req.params.id) {
         let post = await Post.create({
             content: req.body.content,
-            user: req.user._id
+            user: req.user._id,
+            fileformat:extension
         })
         if(req.file){
             post.postimg = POST_PATH + '/' + req.file.filename;
@@ -63,6 +68,17 @@ module.exports.createcomment= async (req,res)=>{
             });
             post.comments.push(comment);
             post.save();
+
+            comment = await comment.populate('user','username email');
+
+            if(req.xhr){
+                return res.status(200).json({
+                    data:{
+                        comment:comment
+                    },
+                    message: "Post created!"
+                })
+            }
             req.flash("success","Comment Create Successfull!")
             res.redirect('back');
         }

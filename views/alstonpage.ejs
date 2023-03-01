@@ -5,11 +5,12 @@
             <img src="/favicon.png" class="logo">
             <h2 class="log">Alston</h2>
             <div class="search-bar">
-                <i class="uil uil-search"></i>
+                <i class="icon uil uil-search"></i>
                 <input type="search" placeholder="Search for creators.">
             </div>
             <div class="create">
-                <label class="btn btn-primar" for="create-post"><a href="/user/singout"style="color: white;">Log-out</a></label>
+                <label class="btn btn-primar" for="create-post"><a href="/user/singout"
+                        style="color: white;">Log-out</a></label>
                 <div class="profile-photo">
                     <a href="/userprofile/<%= user.id %>"><img src="<%=user.avatar%>"></a>
                 </div>
@@ -33,186 +34,55 @@
                 <!-- ----------------SIDEBAR--------------------- -->
                 <div class="sidebar">
                     <a href="#" class="menu-item active">
-                        <span><i class="uil uil-estate"></i></span><h3>Home</h3>
+                        <span><i class="icon uil uil-estate"></i></span>
+                        <h3>Home</h3>
                     </a>
-                    <a href="http://127.0.0.1:5500/data.html" class="menu-item">
-                        <span><i class="uil uil-users-alt"></i></span><h3>friend</h3>
+                    <a href="#" class="menu-item">
+                        <span><i class="icon uil uil-users-alt"></i></span>
+                        <h3>friend</h3>
                     </a>
                     <a class="menu-item">
-                        <span><i class="uil uil-bell" onclick="myFunction()" ><small class="notification-count">9+</small></i></span><h3 onclick="myFunction()">Notification</h3>
-                        <!-- ----------------POP-UP--------------------- -->
-                        <div class="notifications-popup" id="notifications" >
-                            <div>
-                                <div class="profile-photo">
-                                    <img src="/popup.jpg">
-                                </div>
-                                <div class="notification-body">
-                                    <b>Preeti Gupta </b>posted in <b>Gwalior Wale </b>on Wednesday
-                                    <small class="text-muted">49 minutes ago</small>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="profile-photo">
-                                    <img src="/popup1.jpg">
-                                </div>
-                                <div class="notification-body">
-                                    <b>Angel Riya </b>added a photo in <b>शायरों की महफ़िल </b>☺😘❤
-                                    <small class="text-muted">3 hours ago</small>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="profile-photo">
-                                    <img src="/popup2.jpg">
-                                </div>
-                                <div class="notification-body">
-                                    <b>Gautam Pandey </b>like your comment <b>"jai hind"</b>
-                                    <small class="text-muted">14 hours ago</small>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="profile-photo">
-                                    <img src="/popup3.jpg">
-                                </div>
-                                <div class="notification-body">
-                                    <b>Devil Rahul </b>invited you to like <b>Global Informatica.</b>
-                                    <small class="text-muted">2 day ago</small>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="profile-photo">
-                                    <img src="/popup4.jpg">
-                                </div>
-                                <div class="notification-body">
-                                    you have a new friend suggestion: <b>Samiksha Gangele</b>
-                                    <small class="text-muted">2 day ago</small>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="profile-photo">
-                                    <img src="/popup5.jpg">
-                                </div>
-                                 <div class="notification-body">
-                                    You hava a new friend suggestion: <b>Kritika Singh. </b>
-                                    <small class="text-muted">3 day ago</small>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="profile-photo">
-                                    <img src="/popup6.jpg">
-                                </div>
-                                <div class="notification-body">
-                                    <b>Pandit Sultan </b>added a new photo.
-                                    <small class="text-muted">5 day ago</small>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="profile-photo">
-                                    <img src="/popup7.jpg">
-                                </div>
-                                <div class="notification-body">
-                                    24,958 people are watching <b>PUBG Mobile </b>live. Watch and chat with other fans.
-                                    <small class="text-muted">6 day ago</small>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="profile-photo">
-                                    <img src="/popup8.jpg">
-                                </div>
-                                <div class="notification-body">
-                                    <b>Linthoi Moirangch </b>accepted your friend request.
-                                    <small class="text-muted">1 weeks ago</small>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="profile-photo">
-                                    <img src="/popup9.jpg">
-                                </div>
-                                <div class="notification-body">
-                                    You might like <b>Travellers. </b>
-                                    <small class="text-muted">1 weeks ago</small>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="profile-photo">
-                                    <img src="/popup10.jpg">
-                                </div>
-                                <div class="notification-body">
-                                    You might like <b>Jai Shree Ram </b>
-                                    <small class="text-muted">2 weeks ago</small>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="profile-photo">
-                                    <img src="/popup11.jpg">
-                                </div>
-                                <div class="notification-body">
-                                    <b>Angle Shivani Shakya </b>posted in <b>रॉयल ब्राह्मण संगठन ग्वालियर</b>
-                                    <small class="text-muted">3 weeks ago</small>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="profile-photo">
-                                    <img src="/popup12.jpg">
-                                </div>
-                                <div class="notification-body">
-                                    <b>Warning:facebook-club-zone </b>posted a new video.
-                                    <small class="text-muted">3 weeks ago</small>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="profile-photo">
-                                    <img src="/popup13.jpg">
-                                </div>
-                                <div class="notification-body">
-                                    You have a new friedn suggestion: <b>Kajal Pairhar. </b>
-                                    <small class="text-muted">4 weeks ago</small>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="profile-photo">
-                                    <img src="/popup14.jpg">
-                                </div>
-                                <div class="notification-body">
-                                    <b>Warning: Do not </b>like this page, <b>you will die of laughter. </b>posted a new video:
-                                    <small class="text-muted">5 weeks ago</small>
-                                </div>
-                            </div> 
-                        </div>
-                        <!-----------------------------END NOTIFICATION POPUP--------------------------------->
+                        <span><i class="icon uil uil-bell" onclick="myFunction()"><small
+                                    class="notification-count">9+</small></i></span>
+                        <h3 onclick="myFunction()">Notification</h3>
                     </a>
 
                     <a class="menu-item" id="messages-notifications">
-                        <span><i class="uil uil-envelope-alt" onclick="myFunction1()" ><small class="notification-count">6</small></i></span><h3  onclick="myFunction1()">Messages</h3>
-
-                        
+                        <span><i class="icon uil uil-envelope-alt"><small
+                                    class="notification-count">6</small></i></span>
+                        <h3 onclick="myFunction1()">Messages</h3>
                     </a>
-                    <a class="menu-item">
-                        <span><i class="uil uil-swatchbook"></i></i></span><h3>Memories</h3>
+                    <a href="/user/reals" class="menu-item">
+                        <span><i class="uil uil-video"></i></i></i></span>
+                        <h3>Reals</h3>
                     </a>
-                    <a href="http://127.0.0.1:5500/data.html" class="menu-item">
-                        <span><i class="uil uil-chart-line"></i></span><h3>Analytics</h3>
+                    <a href="#" class="menu-item">
+                        <span><i class="icon uil uil-chart-line"></i></span>
+                        <h3>Analytics</h3>
                     </a>
                     <a class="menu-item" id="theme">
-                        <span><i class="uil uil-palette"></i></span><h3>Theme</h3>
+                        <span><i class="uil uil-palette"></i></span>
+                        <h3>Theme</h3>
                     </a>
-                    <a href="http://127.0.0.1:5500/data.html" class="menu-item ">
-                        <span><i class="uil uil-setting"></i></span><h3>Setting</h3>
-                    </a>  
-                         
+                    <a href="#" class="menu-item ">
+                        <span><i class="icon uil uil-setting"></i></span>
+                        <h3>Setting</h3>
+                    </a>
+
                 </div>
                 <!-- ----------------END-LEFT-SIDEBAR--------------------- -->
                 <label for="create-post" class="btn btn-primar">Create Post</label>
                 <div class="messages" id="Message-popup">
                     <div class="heading">
                         <h4>Messages</h4>
-                        <i class="uil uil-message"></i>    
+                        <i class="uil uil-message"></i>
                     </div>
-                     <!-- ----------------SEARCHBAR--------------------- -->
+                    <!-- ----------------SEARCHBAR--------------------- -->
                     <div class="search-bar">
-                        <i class="uil uil-search"></i>
+                        <i class="icon uil uil-search"></i>
                         <input type="search" placeholder="Search messages" id="searchbar" onkeyup="search_message()">
                     </div>
-                     <!-- ----------------MESSAGES CATEGORY--------------------- -->
+                    <!-- ----------------MESSAGES CATEGORY--------------------- -->
                     <div class="category">
                         <h6 class="active">Primary</h6>
                         <h6>General</h6>
@@ -271,84 +141,61 @@
                                 <h5>Alex Qu.</h5>
                                 <p class="text-muted">happy birthday..</p>
                             </div>
-                        </div>  
-                    </div> 
+                        </div>
+                    </div>
                 </div>
                 <!-- ----------------END OF MESSAGES--------------------- -->
             </div>
-            <!-- ----------------END-LEFT-SIDEBAR--------------------- -->
+            <!-- ----------------END-LEFT--------------------- -->
 
             <!-- ----------------MIDDLE--------------------- -->
             <div class="middle">
                 <!-- ----------------STORIES--------------------- -->
                 <div class="stories">
-                    <div class="story">
-                        <div class="profile-photo">
-                            <img src="<%=user.avatar%>" >
+                    <% for(use of all_user) { %>
+                        <div class="story">
+                            <div class="profile-photo">
+                                <img src="<%= use.avatar %>">
+                            </div>
+                            <% if (user.id==use.id) { %>
+                                <p class="name">Your Story</p>
+                            <% } else { %>
+                                <p class="name">
+                                    <%= use.name %>
+                                </p>
+                            <% } %>
                         </div>
-                        <p class="name">Your Story</p>
-                    </div>
-                    <div class="story">
-                        <div class="profile-photo">
-                            <img src="/story0.jpg" >
-                        </div>
-                        <p class="name">Priyanshu Yadav</p>
-                    </div>
-                    <div class="story">
-                        <div class="profile-photo">
-                            <img src="/story1.jpg" >
-                        </div>
-                        <p class="name">Suman Singh</p>
-                    </div>
-                    <div class="story">
-                        <div class="profile-photo">
-                            <img src="/story2.jpg" >
-                        </div>
-                        <p class="name">Angle Priya</p>
-                    </div>
-                    <div class="story">
-                        <div class="profile-photo">
-                            <img src="/story3.jpg" >
-                        </div>
-                        <p class="name">yaar tera Rohit</p>
-                    </div>
-                    <div class="story">
-                        <div class="profile-photo">
-                            <img src="/story4.jpg" >
-                        </div>
-                        <p class="name">Ecyoj Gural</p>
-                    </div>
+                    <% } %>
                 </div>
                 <!-- ----------------END OF STORY--------------------- -->
+                <!-- ---------------- POST --------------------- -->
                 <% if (locals.user) { %>
-                    <form action="/update/createpost/<%= locals.user.id %>"  method="POST"  class="create-post" enctype="multipart/form-data">
-                      <div class="profile-photo" style="width: 5rem;">
-                        <img src="<%= user.avatar %>">
-                      </div>
-                      <div>
-                        <label for="file_upload" class="file_upload_icon" ><i class="uil uil-plus-circle"></i></label>
-                        <input type="file" name="postimg" id="file_upload" class="fileupload" >
-                      </div>
-                      
-                      <input type="text" name="content" placeholder="What's on your mind, Alston?" id="create-post">
-                      <button type="submit" value="Update" class="btn btn-primary">Post</button>
+                    <form action="/update/createpost/<%= locals.user.id %>" method="POST" class="create-post" enctype="multipart/form-data">
+                        <div class="profile-photo">
+                            <img src="<%= user.avatar %>">
+                        </div>
+                        <div>
+                            <label for="file_upload" class="file_upload_icon"><i class="icon uil uil-plus-circle"></i></label>
+                            <input type="file" name="postimg" id="file_upload" class="fileupload">
+                        </div>
+                        <input type="text" name="content" placeholder="What's on your mind, Alston?" id="create-post">
+                        <button type="submit" value="Update" class="btn btn-primary">Post</button>
                     </form>
-                  <% } %>
-                  
+                <% } %>
                 <!-- ----------------FEEDS--------------------- -->
                 <div class="feeds">
                     <% for(post of posts) { %>
                         <%- include('post'); %>
                     <% } %>
                 </div>
-            </div>   
+            </div>
             <!-- ----------------RIGHT--------------------- -->
             <div class="right">
-                
+
 
                 <!-- ----------------FRIEND REQUESTS--------------------- -->
                 <a class=" btn request-btn" onclick="myFunction2()">
-                    <h3 >Requests</h3>
+                    <h3>Requests</h3>
                 </a>
                 <div class="friend-requests" id="reuest-popup">
                     <div class="request">
@@ -444,9 +291,9 @@
                     <div class="contact">
                         <h3>Contact</h3>
                         <div>
-                            <span><i class="uil uil-video"></i></span>
-                            <span><i class="uil uil-search"></i></span>
-                            <span><i class="uil uil-ellipsis-h"></i></span>
+                            <span><i class="icon uil uil-video"></i></span>
+                            <span><i class="icon uil uil-search"></i></span>
+                            <span><i class="icon uil uil-ellipsis-h"></i></span>
                         </div>
                     </div>
                     <% for(user of all_user){%>
@@ -456,13 +303,17 @@
                                     <img src="<%= user.avatar %> " alt="Profile img">
                                 </div>
                                 <div class="notification-body">
-                                    <b><%= user.username %></b>
-                                    <small class="text-muted"><%= user.username %></small>
+                                    <b>
+                                        <%= user.name %>
+                                    </b>
+                                    <small class="text-muted">
+                                        <%= user.name %>
+                                    </small>
                                 </div>
                             </div>
                         </a>
-                        
-                    <%}%>
+
+                        <%}%>
                 </div>
             </div>
             <!-- ----------------END OF RIGHT--------------------- -->
@@ -501,8 +352,8 @@
                     <span class="color-5"></span>
                 </div>
             </div>
-             <!-- ----------------BACKGROUND COLORS--------------------- -->
-             <div class="background">
+            <!-- ----------------BACKGROUND COLORS--------------------- -->
+            <div class="background">
                 <h4>Background</h4>
                 <div class="choose-bg">
                     <div class="bg-1 active">
@@ -522,5 +373,14 @@
         </div>
     </div>
 </div>
-    
-    <script src="index.js"></script>
+<script type="text/javascript" src="/js/toggle_likes.js"></script>
+<script type="text/javascript" src="/js/alstonpage.js" ></script>
+
+
+<script>
+    $('.toggle-like-button').each(function(){
+
+        let self = this;
+        let toggleLike = new ToggleLike(self);
+    });
+</script>

@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="/css/singup.css">
+<div class="container">
+    <div class="form-container">
+        <img src="<%= user.avatar %>" alt="img">
+        <h1>Enter New Password</h1>
+        <form action="/forgotpassword/createnewpassword/<%=user.id %>" method="POST">
+            <input type="password" name="password" placeholder="Enter Passwoed" required />
+            <input type="password" name="conformpassword" placeholder="Enter-Reagin" required />
+            <button>Sign In</button>
+        </form>
+    </div>
+</div>

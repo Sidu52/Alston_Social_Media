@@ -1,7 +1,7 @@
 {
   "name": "socialmedia",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a Alston Social Media web Applicatiion this application crete with the help of Nodejs or EJs and Monogoose",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,10 +16,23 @@
     "express": "^4.18.2",
     "express-ejs-layouts": "^2.5.1",
     "express-session": "^1.17.3",
+    "form-data": "^4.0.0",
+    "jsonwebtoken": "^9.0.0",
     "mongoose": "^6.9.1",
     "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.1",
     "nodemon": "^2.0.20",
     "passport": "^0.6.0",
+    "passport-google-oauth": "^2.0.0",
+    "passport-jwt": "^4.0.1",
     "passport-local": "^1.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sidu52/Alston-Socil-Media-.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Sidu52/Alston-Socil-Media-/issues"
+  },
+  "homepage": "https://github.com/Sidu52/Alston-Socil-Media-#readme"
 }

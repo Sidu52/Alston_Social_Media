@@ -7,6 +7,10 @@ const postschema=new mongoose.Schema({
     postimg:{
         type:String
     },
+    fileformat:{
+        type:String
+    },
+
     user:{
         type:mongoose.Schema.Types.ObjectId,
         ref:'User'
@@ -16,6 +20,12 @@ const postschema=new mongoose.Schema({
         {
             type:mongoose.Schema.Types.ObjectId,
             ref:'comment'
+        }
+    ],
+    likes:[
+        {
+            type:mongoose.Schema.Types.ObjectId,
+            ref:'Like'
         }
     ]
 },{

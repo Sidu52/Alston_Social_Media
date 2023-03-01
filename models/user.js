@@ -4,7 +4,7 @@ const path =require('path');
 const AVATAR_PATH = path.join ('/uploads/users/avatars');
 
 const user=new mongoose.Schema({
-    username:{
+    name:{
         type:String,
         required:true
     },
