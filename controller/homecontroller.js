@@ -2,6 +2,7 @@ const User = require('../models/user');
 const Post = require('../models/post');
 const OTP = require('../models/verification');
 const emailverification = require('../mailers/emailverifed');
+
 module.exports.home = (req, res) => {
     res.render('home', {
         title: "Alston.com"
@@ -26,7 +27,6 @@ module.exports.userprofile = (req, res) => {
 
 module.exports.emailverification = async (req, res) => {
     if (req.body.password != req.body.Conformpassword) {
-        req.flash('error', 'Password mismatch');
         return res.redirect('back');
     }
     const otp = Math.floor(100000 + Math.random() * 900000);

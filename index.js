@@ -12,14 +12,22 @@ const passportGoogle=require('./config/passport-google-oauth2-strategy');
 const MongoStore=require('connect-mongo')(session);
 const flash=require('connect-flash');
 const customMware=require('./config/middleware');
+const { create } = require('./models/user');
+
+// setup the chat server to be used with socket.io
+const chatServer = require('http').createServer(app);
+const chatSockets = require('./config/chat_sockets').chatSockets(chatServer);
+chatServer.listen(5000);
+console.log('chat server is listening on port 5000');
+
+
 
 // I used this when i use (req.body.password) and i find TypeError 
 app.use(express.urlencoded());
 
 // Set extrnal css in ejs
 app.use(express.static('./assets'));
-app.use(express.static('./image'));
-app.use(express.static('./new image'));
+app.use(express.static('./faviconicon'));
 app.use('/uploads',express.static(__dirname + '/uploads'))
 
 app.use(cookie());

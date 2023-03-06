@@ -95,9 +95,9 @@ module.exports.reals = async (req, res, next) => {
 
 // SingOut
 module.exports.singout = (req, res) => {
+    req.flash('success', 'You have logged out!');
     req.logout(function (err) {
         if (err) { return next(err) }
-        req.flash('success', 'You have logged out!');
         return res.redirect('/');
     });
 }

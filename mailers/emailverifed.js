@@ -1,7 +1,6 @@
 const nodeMailer = require('../config/nodemailer');
 
 exports.verification= (email, otp)=>{
-    console.log(email)
     let htmlString = nodeMailer.renderTemplate({ otp: otp }, '/Emailverification/emailverified.ejs')
     nodeMailer.transporter.sendMail({
         from: 'alstonsid9@gmail.com',

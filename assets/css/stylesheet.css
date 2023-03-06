@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
-    --primary-color-hue: 331;
+    --primary-color-hue: 7;
     --dark-color-lightness: 17%;
-    --light-color-lightness: 95%;
-    --white-color-lightness: 100%;
+    --light-color-lightness: 90%;
+    --white-color-lightness: 80%;
 
     --color-dark: hsl(252, 30%, var(--dark-color-lightness));
     --color-white: hsl(252, 30%, var(--white-color-lightness));
     --color-light: hsl(252, 30%, var(--light-color-lightness));
-    --color-gray: hsl(252, 15%, 65%);
-    --color-primary: hsl(var(--primary-color-hue), 99%, 50%);
+    --color-gray: hsl(252, 15%, 45%);
+    --color-primary: hsl(var(--primary-color-hue), 84%, 51%);
     --color-secondary: hsl(252, 100%, 90%);
     --color-success: hsl(120, 95%, 65%);
     --color-danger: hsl(0 95% 65%);
@@ -126,7 +126,7 @@ nav .container {
     margin-left: 10px;
     font-size: 24px;
     font-weight: bold;
-    color: #333;
+    color:var(--color-dark);;
 }
 
 .search-bar {
@@ -424,7 +424,7 @@ main .container .left .profile {
 
 .middle .create-post label i {
     font-size: 2rem;
-    color: #000;
+    color: var(--color-dark);
 }
 
 .middle .create-post input[type="file"] {
@@ -441,6 +441,8 @@ main .container .left .profile {
     padding: 0.5rem;
     border: none;
     outline: none;
+    color: var(--color-dark);;
+    background-color: transparent;
 }
 
 /* <<<<<<<<<<<<<<FEEDS-POST>>>>>>>>>>>>>>>>>> */
@@ -486,7 +488,6 @@ main .container .left .profile {
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 1rem;
-    background-color: #f5f5f5;
     border-bottom: 1px solid #ddd;
 }
 
@@ -497,7 +498,7 @@ main .container .left .profile {
 
 .head .user small {
     font-size: 0.9rem;
-    color: #aaa;
+    color: var(--color-gray);
 }
 
 .head .edit {
@@ -553,7 +554,7 @@ main .container .left .profile {
 
 .interaction-buttons span i{
     font-size: 1.3rem;
-    color: #aaa;
+    color: var(--color-gray);
     cursor: pointer;
     transition: color 0.2s ease;
     margin-right: 1rem;
@@ -611,7 +612,7 @@ main .container .left .profile {
 .comments {
     padding: 0.5rem 1rem;
     font-size: 1rem;
-    color: #aaa;
+    color: var(--color-gray);
     cursor: pointer;
     transition: color 0.2s ease;
     border-bottom: 1px solid #ddd;

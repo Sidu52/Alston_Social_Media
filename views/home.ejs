@@ -10,7 +10,8 @@
         </div>
         <div class="accounts">
             <div class="account">
-                <a href="#" class="profile-text"><img src="/profile picture.jpg">Alston
+                <a href="#" id="login-link" class="profile-text"><img src="/profile picture.jpg">
+                    Alston
                </a>  
             </div>
             <div class="account">
@@ -20,20 +21,19 @@
     </div>
     <!-- ---------------------RIGHT------------------- -->
         <div class="right">
-            <form action="/user/loginuser" method="POST">
+            <form>
                 <div class="email">
-                    <input type="text" name="email" placeholder="Email address or phone number">
+                    <input type="text" id="email-input" name="email" placeholder="Email address or phone number">
                 </div>
                 <div class="email password">    
-                    <input type="password" name="password" placeholder="Password">
+                    <input type="password" id="password-input" name="password" placeholder="Password">
                 </div>
                   
-                    <button class="log-button" type="submit">Log In</button>    
+                    <button class="log-button" id="userlogin" type="submit">Log In</button>    
             </form>
             <form action="/user/singup">
                 <div class="right-text">
                     <a href="/forgotpassword/sendmail"><p>Forgotten password?</p></a>
-                    
                     <hr>
                     <button class="btn-1" type="submit">Create New Account</button>
                     <p><a href="/user/auth/google"><i class="icon uil uil-google"></i></a></p>
@@ -43,3 +43,5 @@
     </div>
     <p class="extra-text"><b>Create a Page</b> for a celebrity, brand or business.</p>
 </main>
+
+<script src="/js/home.js"></script>
