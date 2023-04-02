@@ -1,10 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-    h1   {color: blue;}
-    p    {color: red;}
-</style>
+<head>
+  <meta charset="UTF-8">
+  <title>Alston Social Media</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    h1 {
+      color: red;
+    }
+    p {
+      color: blue;
+    }
+    img {
+      width: 50%;
+      height: auto;
+    }
+  </style>
+</head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
