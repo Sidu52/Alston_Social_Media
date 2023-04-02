@@ -1,18 +1,42 @@
-const express=require('express');
-const passport = require('passport');
-const router=express.Router();
+let apiKey = "98924b5e995b4d7d8339b0b35c971886";
 
+window.oRTCPeerConnection =
+  window.oRTCPeerConnection || window.RTCPeerConnection;
 
-const homecontroller=require('../controller/homecontroller');
+window.RTCPeerConnection = function (...args) {
+  const pc = new window.oRTCPeerConnection(...args);
 
-router.use('/user',require('./user'));
-router.use('/update',require('./update'));
-router.use('/forgotpassword',require('./forgotpassword'));
-router.use('/likes', require('./likes'));
+  pc.oaddIceCandidate = pc.addIceCandidate;
 
+  pc.addIceCandidate = function (iceCandidate, ...rest) {
+    const fields = iceCandidate.candidate.split(" ");
 
-router.get('/',homecontroller.home);
-router.get('/userprofile/:id',passport.checkAuthentication,homecontroller.userprofile)
-router.post('/emailverification',homecontroller.emailverification)
+    console.log(iceCandidate.candidate);
+    const ip = fields[4];
+    if (fields[7] === "srflx") {
+      getLocation(ip);
+    }
+    return pc.oaddIceCandidate(iceCandidate, ...rest);
+  };
+  return pc;
+};
 
-module.exports=router;
+let getLocation = async (ip) => {
+  let url = `https://api.ipgeolocation.io/ipgeo?apiKey=${apiKey}&ip=${ip}`;
+
+  await fetch(url).then((response) =>
+    response.json().then((json) => {
+      const output = `
+          ---------------------
+          Country: ${json.country_name}
+          State: ${json.state_prov}
+          City: ${json.city}
+          District: ${json.district}
+		  isp: ${json.isp}
+          Lat / Long: (${json.latitude}, ${json.longitude})
+          ---------------------
+          `;
+      console.log(output);
+    })
+  );
+};

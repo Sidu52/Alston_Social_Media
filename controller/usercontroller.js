@@ -46,31 +46,37 @@ module.exports.singup = (req, res) => {
 
 //Create user in mongoose
 module.exports.createuser = async (req, res) => {
-    let user = await otp.findById(req.params.id);
-    if (user.OTP == req.body.OTP) {
-        User.findOne({ email: user.email }, (err, finduser) => {
-            if (err) { console.log("Error in findin user ", err); return }
-            if (!finduser) {
-                User.create({
-                    name: user.name,
-                    email: user.email,
-                    password: user.password
-                }, (err, user) => {
-                    if (err) { console.log("Error in creating user in mongoose "); return }
-                    req.flash("success", "User register successful")
-                    return res.redirect('/')
-                })
-            }
-            else {
-                req.flash("success", "User Already register")
-                return res.redirect('/');
-            }
-        });
-    } else {
-        req.flash("error", "Wron OTP");
-        return res.redirect('/user/singup');
+    try {
+        let user = await otp.findById(req.params.id);
+        if (user.OTP == req.body.OTP) {
+            User.findOne({ email: user.email }, (err, finduser) => {
+                if (err) { console.log("Error in findin user ", err); return }
+                if (!finduser) {
+                    User.create({
+                        name: user.name,
+                        email: user.email,
+                        password: user.password
+                    }, (err, user) => {
+                        if (err) { console.log("Error in creating user in mongoose "); return }
+                        req.flash("success", "User register successful")
+                        return res.redirect('/')
+                    })
+                }
+                else {
+                    req.flash("success", "User Already register")
+                    return res.redirect('/');
+                }
+            });
+        } else {
+            req.flash("error", "Wron OTP");
+            return res.redirect('/user/singup');
 
+        }
+    } catch (err) {
+        console.log(err);
+        return
     }
+
 }
 
 //Login user
@@ -86,7 +92,7 @@ module.exports.reals = async (req, res, next) => {
         return res.render('reals', {
             title: "Reals",
             post: posts,
-            user:users
+            user: users
         });
     } catch (err) {
         next(err);

@@ -26,14 +26,13 @@ module.exports.userprofile = (req, res) => {
 }
 
 module.exports.emailverification = async (req, res) => {
-    if (req.body.password != req.body.Conformpassword) {
-        return res.redirect('back');
-    }
-    const otp = Math.floor(100000 + Math.random() * 900000);
-    const otpExpiresAt = Date.now() + 120000;
-
     try {
         OTP.findOne({ email: req.body.email }, (err, users) => {
+            if (req.body.password != req.body.Conformpassword) {
+                return res.redirect('back');
+            }
+            const otp = Math.floor(100000 + Math.random() * 900000);
+            const otpExpiresAt = Date.now() + 120000;
             if (!users) {
                 let user = OTP.create({
                     name: req.body.username,
