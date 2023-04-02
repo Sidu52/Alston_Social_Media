@@ -1,5 +1,5 @@
 const mongoose=require('mongoose');
-const url = 'mongodb://0.0.0.0:27017/Alsotofrinds';
+const url = 'mongodb+srv://Sidhu:Sidu&7879@cluster0.fca4n63.mongodb.net/Alston_Social_Media';
 
 
 mongoose.connect(url);
