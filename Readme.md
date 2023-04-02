@@ -2,7 +2,6 @@
 <html>
 <head>
 <style>
-    body {background-color: powderblue;}
     h1   {color: blue;}
     p    {color: red;}
 </style>
@@ -15,7 +14,7 @@
 <h1>Features</h1>
 <ul>
 <li>User registration and login</li>
-<img src="#" alt="ss">
+<img  style="width:50px; height:50px" src="https://images.unsplash.com/photo-1678178092123-7763d2975fbc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="ss">
 <li>Uploading of posts including images, videos, and blog posts</li>
 <img src="#" alt="ss">
 <li>Liking and commenting on posts</li>
