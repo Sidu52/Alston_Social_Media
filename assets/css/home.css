@@ -98,8 +98,7 @@ main .account{
 .right .right-text .btn-1,.right .right-text .btn-2{
     font-size: 1.5vw;
     background: rgb(14, 237, 29);
-    line-height: 48px;
-    padding: 0 16px;
+    padding: 8px 16px;
     width: 20vw;
     border-radius: 7px;
 }
@@ -130,9 +129,6 @@ main .account{
     }
     .right{
         height: 20rem;
-    }
-    .right .right-text button{
-        display: none;
     }
     .right .right-text .btn-2{
         display: block;
