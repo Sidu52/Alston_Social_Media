@@ -10,19 +10,19 @@
 <h1>Features</h1>
 <ul>
 <li>User registration and login</li>
-<img  style="width:50%; height:auto" src="https://images.unsplash.com/photo-1678178092123-7763d2975fbc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="ss">
+<!-- <img  style="width:50%; height:auto" src="https://images.unsplash.com/photo-1678178092123-7763d2975fbc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="ss"> -->
 <li>Uploading of posts including images, videos, and blog posts</li>
-<img src="#" alt="ss">
+<!-- <img src="#" alt="ss"> -->
 <li>Liking and commenting on posts</li>
-<img src="#" alt="ss">
+<!-- <img src="#" alt="ss"> -->
 <li>"Reels" feature</li>
-<img src="#" alt="ss">
+<!-- <img src="#" alt="ss"> -->
 <li>Ability to change theme, font size, and button colors</li>
-<img src="#" alt="ss">
+<!-- <img src="#" alt="ss"> -->
 <li>Live chat feature</li>
-<img src="#" alt="ss">
+<!-- <img src="#" alt="ss"> -->
 <li>Safe profile page for viewing user posts</li>
-<img src="#" alt="ss">
+<!-- <img src="#" alt="ss"> -->
 </ul>
  
  <h1>Technologies Used</h1>
